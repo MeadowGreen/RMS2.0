@@ -6,7 +6,7 @@ var incident_controller = require('../controllers/incidentController');
 var person_controller = require('../controllers/personController');
 var vehicle_controller = require('../controllers/vehicleController');
 
-/// BOOK ROUTES ///
+/// INCIDENT ROUTES ///
 
 // GET catalog home page.
 router.get('/', incident_controller.index);
@@ -61,7 +61,7 @@ router.get('/person/:id', person_controller.person_detail);
 // GET request for list of all people.
 router.get('/persons', person_controller.person_list);
 
-/// GENRE ROUTES ///
+/// VEHICLE ROUTES ///
 
 // GET request for creating a vehicle. NOTE This must come before route that displays Genre (uses id).
 router.get('/vehicle/create', vehicle_controller.vehicle_create_get);
