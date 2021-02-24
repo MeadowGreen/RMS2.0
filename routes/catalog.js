@@ -6,7 +6,7 @@ var incident_controller = require('../controllers/incidentController');
 var person_controller = require('../controllers/personController');
 var vehicle_controller = require('../controllers/vehicleController');
 
-/// BOOK ROUTES ///
+/// INCIDENT ROUTES ///
 
 // GET catalog home page.
 router.get('/', incident_controller.index);
@@ -37,54 +37,54 @@ router.get('/incidents', incident_controller.incident_list);
 
 /// AUTHOR ROUTES ///
 
-// GET request for creating Author. NOTE This must come before route for id (i.e. display author).
+// GET request for creating a person. NOTE This must come before route for id (i.e. display author).
 router.get('/person/create', person_controller.person_create_get);
 
-// POST request for creating Author.
+// POST request for creating a person.
 router.post('/person/create', person_controller.person_create_post);
 
-// GET request to delete Author.
+// GET request to delete a person.
 router.get('/person/:id/delete', person_controller.person_delete_get);
 
-// POST request to delete Author.
+// POST request to delete a person.
 router.post('/person/:id/delete', person_controller.person_delete_post);
 
-// GET request to update Author.
+// GET request to update a person.
 router.get('/person/:id/update', person_controller.person_update_get);
 
-// POST request to update Author.
+// POST request to update a person.
 router.post('/person/:id/update', person_controller.person_update_post);
 
-// GET request for one Author.
+// GET request for one person.
 router.get('/person/:id', person_controller.person_detail);
 
-// GET request for list of all Authors.
+// GET request for list of all people.
 router.get('/persons', person_controller.person_list);
 
-/// GENRE ROUTES ///
+/// VEHICLE ROUTES ///
 
-// GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
+// GET request for creating a vehicle. NOTE This must come before route that displays Genre (uses id).
 router.get('/vehicle/create', vehicle_controller.vehicle_create_get);
 
-//POST request for creating Genre.
+//POST request for creating a vehicle.
 router.post('/vehicle/create', vehicle_controller.vehicle_create_post);
 
-// GET request to delete Genre.
+// GET request to delete a vehicle.
 router.get('/vehicle/:id/delete', vehicle_controller.vehicle_delete_get);
 
-// POST request to delete Genre.
+// POST request to delete a vehicle.
 router.post('/vehicle/:id/delete', vehicle_controller.vehicle_delete_post);
 
-// GET request to update Genre.
+// GET request to update a vehicle.
 router.get('/vehicle/:id/update', vehicle_controller.vehicle_update_get);
 
-// POST request to update Genre.
+// POST request to update a vehicle.
 router.post('/vehicle/:id/update', vehicle_controller.vehicle_update_post);
 
-// GET request for one Genre.
+// GET request for one vehicle.
 router.get('/vehicle/:id', vehicle_controller.vehicle_detail);
 
-// GET request for list of all Genre.
+// GET request for list of all vehicles.
 router.get('/vehicles', vehicle_controller.vehicle_list);
 
 module.exports = router;
