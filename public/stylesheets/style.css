@@ -1,27 +1,40 @@
 #main a{
   text-decoration: none;
   color: black;
-  font-size: large;
+  font-size: 30px;
   display: block;
 }
-#main h1{
-  text-align: center;
-  float: right;
-  padding-right: 35%;
+#main a:hover{
+  color: navy;
+  font-size: 35px;
+  margin-right: -5%;
+  transition: .5s;
 }
+
 #main .card-body{
-  padding-top: 10%;
+  padding-top: 6%;
+  padding-left: 0%;
 }
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#header{
+  background-color: #111;
+  color: goldenrod;
+  height: 120px;
+  padding-top: 2%;
+}
+button{
+  text-align: center;
+  float: left;
+  margin-left: 25%;
+  margin-right: 5%;
+}
 #main{
-  transition: margin-left .5s; /* If you want a transition effect */
-  padding: 1%;
+  transition: 1s; /* transition effect */
+  padding: 2%;
 }
 #main p{
   font-size: larger;
-  text-align: center;
   float: right;
-  padding-right: 78%;
+  margin-right: 50%;
 }
 
 /* The sidebar menu */
@@ -35,7 +48,7 @@
   background-color: #111; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  transition: 1s; 
 }
 
 /* The sidebar links */
@@ -45,12 +58,12 @@
   font-size: 25px;
   color: #818181;
   display: block;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidebar a:hover {
-  color: #f1f1f1;
+  color: navy;
 }
 
 /* Position and style the close button (top right corner) */
@@ -73,7 +86,7 @@
 }
 
 .openbtn:hover {
-  background-color: #444;
+  background-color:navy;
 }
 
 
