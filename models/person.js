@@ -25,5 +25,5 @@ var personSchema = new Schema({
     phone_number: { type: Number, required: true },
     gang: { type: String, required: true },
     hazards: { type: String, required: true },
-    photos: { type: String, required: true }, 
+    photos: { type: String, required: true },
 });

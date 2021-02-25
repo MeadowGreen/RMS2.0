@@ -21,7 +21,7 @@ router.post('/incident/create', incident_controller.incident_create_post);
 router.get('/incident/:id/delete', incident_controller.incident_delete_get);
 
 // POST request to delete a incident report.
-router.post('/incident/:id/delete',incident_controller.incident_delete_post);
+router.post('/incident/:id/delete', incident_controller.incident_delete_post);
 
 // GET request to update a incident report.
 router.get('/incident/:id/update', incident_controller.incident_update_get);
@@ -35,56 +35,56 @@ router.get('/incident/:id', incident_controller.incident_detail);
 // GET request for list of the incident reports.
 router.get('/incidents', incident_controller.incident_list);
 
-/// AUTHOR ROUTES ///
+// /// AUTHOR ROUTES ///
 
-// GET request for creating a person. NOTE This must come before route for id (i.e. display author).
-router.get('/person/create', person_controller.person_create_get);
+// // GET request for creating a person. NOTE This must come before route for id (i.e. display author).
+// router.get('/person/create', person_controller.person_create_get);
 
-// POST request for creating a person.
-router.post('/person/create', person_controller.person_create_post);
+// // POST request for creating a person.
+// router.post('/person/create', person_controller.person_create_post);
 
-// GET request to delete a person.
-router.get('/person/:id/delete', person_controller.person_delete_get);
+// // GET request to delete a person.
+// router.get('/person/:id/delete', person_controller.person_delete_get);
 
-// POST request to delete a person.
-router.post('/person/:id/delete', person_controller.person_delete_post);
+// // POST request to delete a person.
+// router.post('/person/:id/delete', person_controller.person_delete_post);
 
-// GET request to update a person.
-router.get('/person/:id/update', person_controller.person_update_get);
+// // GET request to update a person.
+// router.get('/person/:id/update', person_controller.person_update_get);
 
-// POST request to update a person.
-router.post('/person/:id/update', person_controller.person_update_post);
+// // POST request to update a person.
+// router.post('/person/:id/update', person_controller.person_update_post);
 
-// GET request for one person.
-router.get('/person/:id', person_controller.person_detail);
+// // GET request for one person.
+// router.get('/person/:id', person_controller.person_detail);
 
-// GET request for list of all people.
-router.get('/persons', person_controller.person_list);
+// // GET request for list of all people.
+// router.get('/persons', person_controller.person_list);
 
-/// VEHICLE ROUTES ///
+// /// VEHICLE ROUTES ///
 
-// GET request for creating a vehicle. NOTE This must come before route that displays Genre (uses id).
-router.get('/vehicle/create', vehicle_controller.vehicle_create_get);
+// // GET request for creating a vehicle. NOTE This must come before route that displays Genre (uses id).
+// router.get('/vehicle/create', vehicle_controller.vehicle_create_get);
 
-//POST request for creating a vehicle.
-router.post('/vehicle/create', vehicle_controller.vehicle_create_post);
+// //POST request for creating a vehicle.
+// router.post('/vehicle/create', vehicle_controller.vehicle_create_post);
 
-// GET request to delete a vehicle.
-router.get('/vehicle/:id/delete', vehicle_controller.vehicle_delete_get);
+// // GET request to delete a vehicle.
+// router.get('/vehicle/:id/delete', vehicle_controller.vehicle_delete_get);
 
-// POST request to delete a vehicle.
-router.post('/vehicle/:id/delete', vehicle_controller.vehicle_delete_post);
+// // POST request to delete a vehicle.
+// router.post('/vehicle/:id/delete', vehicle_controller.vehicle_delete_post);
 
-// GET request to update a vehicle.
-router.get('/vehicle/:id/update', vehicle_controller.vehicle_update_get);
+// // GET request to update a vehicle.
+// router.get('/vehicle/:id/update', vehicle_controller.vehicle_update_get);
 
-// POST request to update a vehicle.
-router.post('/vehicle/:id/update', vehicle_controller.vehicle_update_post);
+// // POST request to update a vehicle.
+// router.post('/vehicle/:id/update', vehicle_controller.vehicle_update_post);
 
-// GET request for one vehicle.
-router.get('/vehicle/:id', vehicle_controller.vehicle_detail);
+// // GET request for one vehicle.
+// router.get('/vehicle/:id', vehicle_controller.vehicle_detail);
 
-// GET request for list of all vehicles.
-router.get('/vehicles', vehicle_controller.vehicle_list);
+// // GET request for list of all vehicles.
+// router.get('/vehicles', vehicle_controller.vehicle_list);
 
 module.exports = router;
