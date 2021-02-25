@@ -9,6 +9,9 @@ html(lang='en')
     script(src='/stylesheets/script.js')
     title RMS
   body
+    #header
+      button.openbtn(onclick='openNav()') &#9776;
+      h1 Records Management System
     #mySidebar.sidebar
       a.closebtn(href='javascript:void(0)' onclick='closeNav()') &times;
       a(href='#') Home
@@ -16,20 +19,18 @@ html(lang='en')
       a(href='#') All persons
       a(href='#') All vehicles
     #main
-      h1 Records Management System
-      button.openbtn(onclick='openNav()') &#9776;
       .card-body
         a(href='#')
-          svg.bi.bi-plus-circle-fill(xmlns='http://www.w3.org/2000/svg' width='50' height='50' fill='currentColor' viewBox='0 0 16 16')
+          p Add new incident report
+          svg.bi.bi-plus-circle-fill(xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='currentColor' viewBox='0 0 16 16')
             path(d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z')
-              p Add new incident report
               .card-body
                 a(href='#')
-                  svg.bi.bi-plus-circle-fill(xmlns='http://www.w3.org/2000/svg' width='50' height='50' fill='currentColor' viewBox='0 0 16 16')
+                  p Add new person report
+                  svg.bi.bi-plus-circle-fill(xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='currentColor' viewBox='0 0 16 16')
                     path(d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z')
-                      p Add new person report
                       .card-body
                         a(href='#')
-                          svg.bi.bi-plus-circle-fill(xmlns='http://www.w3.org/2000/svg' width='50' height='50' fill='currentColor' viewBox='0 0 16 16')
+                          p Add new vehicle report
+                          svg.bi.bi-plus-circle-fill(xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='currentColor' viewBox='0 0 16 16')
                             path(d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z')
-                              p Add new vehicle report

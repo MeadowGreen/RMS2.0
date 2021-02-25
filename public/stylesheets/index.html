@@ -7,30 +7,46 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <title>RMS</title>
 </head>
 <body>
+    <div id="header">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <h1>Records Management System</h1>
+    </div>
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="#">Home</a>
         <a href="#">All incidents</a>
         <a href="#">All persons</a>
         <a href="#">All vehicles</a>
-      </div>
+    </div>
       
       <div id="main">
-        <button class="openbtn" onclick="openNav()">&#9776;</button>
-        <h1>Records Management System</h1>
-        <div>
-            <p><a href="#">Add new incident report</a></p>
+        <div class="card-body">
+            <a href="#">
+                <p>Add new incident report</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                </svg>
+            </a>
         </div>
-        <div>
-            <p><a href="#">Add new person report</a></p>
+        <div class="card-body">
+            <a href="#">
+                <p>Add new person report</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+            </svg>
+            </a>
         </div>
-        <div>
-            <p><a href="#">Add new vehicle report</a></p>
+        <div class="card-body">
+            <a href="#">
+                <p>Add new vehicle report</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+            </svg>
+            </a>
         </div>
-      </div>
+    </div>
 </body>
 </html>
