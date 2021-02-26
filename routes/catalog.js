@@ -21,7 +21,7 @@ router.post('/incident/create', incident_controller.incident_create_post);
 router.get('/incident/:id/delete', incident_controller.incident_delete_get);
 
 // POST request to delete a incident report.
-router.post('/incident/:id/delete',incident_controller.incident_delete_post);
+router.post('/incident/:id/delete', incident_controller.incident_delete_post);
 
 // GET request to update a incident report.
 router.get('/incident/:id/update', incident_controller.incident_update_get);
@@ -35,7 +35,7 @@ router.get('/incident/:id', incident_controller.incident_detail);
 // GET request for list of the incident reports.
 router.get('/incidents', incident_controller.incident_list);
 
-/// AUTHOR ROUTES ///
+// PERSON ROUTES
 
 // GET request for creating a person. NOTE This must come before route for id (i.e. display author).
 router.get('/person/create', person_controller.person_create_get);
