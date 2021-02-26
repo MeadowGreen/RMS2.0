@@ -15,7 +15,4 @@ var incidentSchema = new Schema({
     officer_serial_number: { type: Number, required: true },
     report_date: { type: Date, required: true },
     report_time: { type: String, required: true },
-    value: { type: Number, required: true },
-    supp: { type: String, required: true },
-    serial_number: { type: Number, required: true }
 });
