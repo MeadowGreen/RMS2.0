@@ -7,6 +7,11 @@ var incidentSchema = new Schema({
     occurrence_date: { type: Date, required: true },
     occurrence_time: { type: String, required: true },
     incident_type: { type: String, required: true },
+<<<<<<< HEAD
+=======
+    location: { type: String, required: true },
+    narrative: { type: String, required: true },
+>>>>>>> main
     location: { type: String, required: true },
     narrative: { type: String, required: true },
     case_status: { type: String, required: true },
@@ -18,5 +23,8 @@ var incidentSchema = new Schema({
     supp: { type: String, required: true },
     serial_number: { type: Number, required: true }
 });
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> main
