@@ -6,7 +6,8 @@ function generateIncidents() {
   let incidents = []
 
   for (let id=1; id <= 10; id++) {
-
+    
+    let ir = faker.random.number(12345);
     let occurrence_date = faker.date.future();
     let occurrence_time = faker.time.recent();
     let incident_type = faker.random.alpha(3);
@@ -19,18 +20,19 @@ function generateIncidents() {
     let report_time = faker.time.recent();
 
 
-    users.push({
+    incidents.push({
         "id": id,
-        "occurrence_date": future,
-        "occurrence_time": recent,
-        "incident_type": alpha,
-        "location": streetAddress,
-        "location_name": companyName,
-        "narrative": paragraphs,
-        "officer_name": firstName,
-        "officer_serial_number": number,
-        "report_date": future,
-        "report_time": recent,
+        "ir": ir,
+        "occurrence_date": occurrence_date,
+        "occurrence_time": occurrence_time,
+        "incident_type": incident_type,
+        "location": location,
+        "location_name": location_name,
+        "narrative": narrative,
+        "officer_name": officer_name,
+        "officer_serial_number": officer_serial_number,
+        "report_date": report_date,
+        "report_time": report_time,
     });
   }
 
