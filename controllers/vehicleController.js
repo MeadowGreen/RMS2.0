@@ -2,12 +2,12 @@ var Incident = require('../models/incident');
 var Person = require('../models/person');
 var Vehicle = require('../models/vehicle');
 
-// Display list of all vehicle.
+// Display list of all vehicles.
 exports.index = function(req, res) {
     res.send('NOT IMPLEMENTED: Vehicle list');
 };
 
-// Display list of all vehicle.
+// Display list of all vehicles.
 exports.vehicle_list = function(req, res) {
     res.send('NOT IMPLEMENTED: Vehicle list');
 };
