@@ -6,12 +6,12 @@ var async = require('async');
 
 // Display list of all incidents.
 exports.index = function (req, res) {
-    res.send('NOT IMPLEMENTED: Incident home');
+    res.render('index');
 };
 
 // Display list of all incidents.
-exports.incident_list = function (req, res) {
-    res.send('NOT IMPLEMENTED: Incident list');
+exports.incident_list = function (req, res, next) {
+    res.render('incident_list');
 };
 
 // Display detail page for a specific incident.
