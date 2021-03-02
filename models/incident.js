@@ -2,16 +2,11 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var incidentSchema = new Schema({
+var IncidentSchema = new Schema({
     ir: { type: Number, required: true },
     occurrence_date: { type: Date, required: true },
     occurrence_time: { type: String, required: true },
     incident_type: { type: String, required: true },
-<<<<<<< HEAD
-=======
-    location: { type: String, required: true },
-    narrative: { type: String, required: true },
->>>>>>> main
     location: { type: String, required: true },
     narrative: { type: String, required: true },
     case_status: { type: String, required: true },
@@ -23,8 +18,13 @@ var incidentSchema = new Schema({
     supp: { type: String, required: true },
     serial_number: { type: Number, required: true }
 });
-<<<<<<< HEAD
 
+// Virtual for author "full" name.
+IncidentSchema.virtual('incident_number').get(function () {
+    return this.ir;
+});
 
-=======
->>>>>>> main
+// Virtual for this author instance URL.
+IncidentSchema.virtual('url').get(function () {
+    return '/catalog/incident/' + this._id;
+});

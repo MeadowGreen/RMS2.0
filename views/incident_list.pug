@@ -8,7 +8,6 @@ block content
   each incident in incident_list
     li 
       a(href=incident.url) #{incident.name} 
-      | (#{incident.lifespan})
 
   else
     li There are no incidents.

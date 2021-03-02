@@ -1,0 +1,14 @@
+extends layout
+
+block content
+   #main
+      h2 Vehicle List
+      .card-body
+        ul
+  each vehicle in vehicle
+    li 
+      a(href=vehicle.url) #{vehicle.name} 
+      | (#{vehicle.lifespan})
+
+  else
+    li There are no vehicles.
