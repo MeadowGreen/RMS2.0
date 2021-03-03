@@ -4,20 +4,14 @@ var Vehicle = require('../models/vehicle');
 
 var async = require('async');
 
-// Display list of all incidents.
+// Display the home page.
 exports.index = function (req, res) {
     res.render('index');
 };
 
 // Display list of all incidents.
 exports.incident_list = function (req, res, next) {
-    Incident.find()
-        .sort([['ir', 'ascending']])
-        .exec(function (err, list_incidents) {
-            if (err) { return next(err); }
-            //Successful, so render
-            res.render('incident_list', { title: 'Incident List', incident_list: list_incidents });
-        });
+    res.send('NOT IMPLEMENTED: Incident list');
 };
 
 // Display detail page for a specific incident.
