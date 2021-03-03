@@ -11,7 +11,6 @@ exports.index = function (req, res) {
 
 // Display list of all incidents.
 exports.incident_list = function (req, res, next) {
-<<<<<<< HEAD
     Incident.find()
         .sort([['ir', 'ascending']])
         .exec(function (err, list_incidents) {
@@ -19,9 +18,6 @@ exports.incident_list = function (req, res, next) {
             //Successful, so render
             res.render('incident_list', { title: 'Incident List', incident_list: list_incidents });
         });
-=======
-    res.render('incident_list');
->>>>>>> main
 };
 
 // Display detail page for a specific incident.
