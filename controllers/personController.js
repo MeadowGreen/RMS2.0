@@ -2,9 +2,9 @@ var Incident = require('../models/incident');
 var Person = require('../models/person');
 var Vehicle = require('../models/vehicle');
 
-// Display list of all persons.
-exports.index = function(req, res) {
-    res.send('NOT IMPLEMENTED: Person list');
+// Display the home page.
+exports.index = function (req, res) {
+    res.render('index');
 };
 
 // Display list of all persons.
