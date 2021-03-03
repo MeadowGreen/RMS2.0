@@ -17,7 +17,10 @@ var IncidentSchema = new Schema({
     value: { type: Number, required: true },
     supp: { type: String, required: true },
     serial_number: { type: Number, required: true }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 });
 
 // Virtual for author "full" name.
