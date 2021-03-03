@@ -24,17 +24,11 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/catalog', catalogRouter);
 
-//Import the mongoose module
+//Set up mongoose connection
 var mongoose = require('mongoose');
-
-//Set up default mongoose connection
-var mongoDB = 'mongodb://127.0.0.1/my_database';
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
-
-//Get the default connection
+var mongoDB = 'mongodb+srv://Admin:Joel3763@Cluster0.wvozc.mongodb.net/RMS2.0?retryWrites=true&w=majority';
+mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
 var db = mongoose.connection;
-
-//Bind connection to error event (to get notification of connection errors)
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // catch 404 and forward to error handler
