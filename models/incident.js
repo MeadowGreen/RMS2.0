@@ -7,11 +7,6 @@ var IncidentSchema = new Schema({
     occurrence_date: { type: Date, required: true },
     occurrence_time: { type: String, required: true },
     incident_type: { type: String, required: true },
-<<<<<<< HEAD
-=======
-    location: { type: String, required: true },
-    narrative: { type: String, required: true },
->>>>>>> main
     location: { type: String, required: true },
     narrative: { type: String, required: true },
     case_status: { type: String, required: true },
@@ -22,7 +17,7 @@ var IncidentSchema = new Schema({
     value: { type: Number, required: true },
     supp: { type: String, required: true },
     serial_number: { type: Number, required: true }
-<<<<<<< HEAD
+
 });
 
 // Virtual for author "full" name.
@@ -33,6 +28,4 @@ IncidentSchema.virtual('incident_number').get(function () {
 // Virtual for this author instance URL.
 IncidentSchema.virtual('url').get(function () {
     return '/catalog/incident/' + this._id;
-=======
->>>>>>> main
 });
