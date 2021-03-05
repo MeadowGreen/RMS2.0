@@ -11,7 +11,7 @@ exports.index = function (req, res) {
 
 // Display list of all incidents.
 exports.incident_list = function (req, res, next) {
-    res.send('NOT IMPLEMENTED: Incident list');
+    res.render('incident_list');
 };
 
 // Display detail page for a specific incident.

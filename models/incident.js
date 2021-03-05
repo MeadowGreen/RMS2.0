@@ -19,12 +19,17 @@ var IncidentSchema = new Schema({
     serial_number: { type: Number, required: true }
 });
 
-// Virtual for author "full" name.
+// Virtual for incident IR Number.
 IncidentSchema.virtual('incident_number').get(function () {
     return this.ir;
 });
 
-// Virtual for this author instance URL.
+// Virtual for this incident URL.
 IncidentSchema.virtual('url').get(function () {
     return '/catalog/incident/' + this._id;
+});
+
+// Virtual for this incident serial number.
+IncidentSchema.virtual('name').get(function () {
+    return this.serial_number;
 });

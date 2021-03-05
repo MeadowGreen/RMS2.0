@@ -14,23 +14,30 @@ html(lang='en')
       h1 Records Management System
     #mySidebar.sidebar
       a.closebtn(href='javascript:void(0)' onclick='closeNav()') &times;
+<<<<<<< HEAD
       a(href='/') Home
       a(href='/incidents') All incidents
       a(href='/persons') All persons
       a(href='/vehicles') All vehicles
+=======
+      a(href='/catalog') Home
+      a(href='/catalog/incidents') All incidents
+      a(href='/catalog/persons') All persons
+      a(href='/catalog/vehicles') All vehicles
+>>>>>>> main
     #main
       .card-body
-        a(href='#')
+        a(href='/catalog/incident/create')
           p Add new incident report
           svg.bi.bi-plus-circle-fill(xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='currentColor' viewBox='0 0 16 16')
             path(d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z')
               .card-body
-                a(href='#')
+                a(href='/catalog/person/create')
                   p Add new person report
                   svg.bi.bi-plus-circle-fill(xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='currentColor' viewBox='0 0 16 16')
                     path(d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z')
                       .card-body
-                        a(href='#')
+                        a(href='/catalog/vehicle/create')
                           p Add new vehicle report
                           svg.bi.bi-plus-circle-fill(xmlns='http://www.w3.org/2000/svg' width='80' height='80' fill='currentColor' viewBox='0 0 16 16')
                             path(d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z')
