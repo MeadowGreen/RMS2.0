@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 doctype html
 html(lang='en')
   head
@@ -27,18 +26,3 @@ html(lang='en')
             a(href=incident.url) #{incident.incident_number} 
         else
           li There are no incidents.
-=======
-extends layout
-
-block content
-  #main
-    h2 Incident List
-    .card-body
-      ul
-each incident in incident_list
-  li 
-    a(href=incident.url) #{incident.name} 
-
-else
-  li There are no incidents.
->>>>>>> main

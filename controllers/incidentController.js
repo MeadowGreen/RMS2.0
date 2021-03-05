@@ -5,8 +5,14 @@ var Vehicle = require('../models/vehicle');
 var async = require('async');
 
 // Display the home page.
-exports.index = function (req, res) {
-    res.render('index');
+exports.index = function (req, res, next) {
+    Incident.find()
+        .sort([['ir', 'ascending']])
+        .exec(function (err, list_incidents) {
+            if (err) { return next(err); }
+            //Successful, so render
+            res.render('incident_list', { title: 'Incident List', incident_list: list_incidents });
+        });
 };
 
 // Display list of all incidents.
