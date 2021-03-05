@@ -5,19 +5,19 @@ var Vehicle = require('../models/vehicle');
 var async = require('async');
 
 // Display the home page.
-exports.index = function (req, res, next) {
-    Incident.find()
-        .sort([['ir', 'ascending']])
-        .exec(function (err, list_incidents) {
-            if (err) { return next(err); }
-            //Successful, so render
-            res.render('incident_list', { title: 'Incident List', incident_list: list_incidents });
-        });
+exports.index = function (req, res) {
 };
 
 // Display list of all incidents.
 exports.incident_list = function (req, res, next) {
-    res.render('incident_list');
+    Incident.find()
+        .sort([['ir', 'ascending']])
+        .exec(function (err, list_incidents) {
+            console.log(list_incidents);
+            if (err) { return next(err); }
+            //Successful, so render
+            res.render('incident_list', { title: 'Incident List', incident_list: list_incidents });
+        });
 };
 
 // Display detail page for a specific incident.
