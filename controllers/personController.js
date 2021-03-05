@@ -19,7 +19,7 @@ exports.person_detail = function(req, res) {
 
 // Display person create form on GET.
 exports.person_create_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Person create GET');
+    res.render('person_form');
 };
 
 // Handle person create on POST.

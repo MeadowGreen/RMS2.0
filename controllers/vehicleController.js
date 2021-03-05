@@ -19,7 +19,7 @@ exports.vehicle_detail = function(req, res) {
 
 // Display vehicle create form on GET.
 exports.vehicle_create_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: Vehicle create GET');
+    res.render('vehicle_form');
 };
 
 // Handle vehicle create on POST.

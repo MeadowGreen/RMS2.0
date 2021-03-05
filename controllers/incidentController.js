@@ -6,6 +6,7 @@ var async = require('async');
 
 // Display the home page.
 exports.index = function (req, res, next) {
+    res.render('index');
     Incident.find()
         .sort([['ir', 'ascending']])
         .exec(function (err, list_incidents) {
@@ -27,7 +28,7 @@ exports.incident_detail = function (req, res) {
 
 // Display incident create form on GET.
 exports.incident_create_get = function (req, res) {
-    res.send('NOT IMPLEMENTED: Incident create GET');
+    res.render('incident_form');
 };
 
 // Handle incident create on POST.

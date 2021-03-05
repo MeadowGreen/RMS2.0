@@ -1,0 +1,168 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl' crossorigin='anonymous')
+    link(href='/stylesheets/style.css' rel='stylesheet')
+    script(src='/stylesheets/script.js')
+    title RMS
+  body
+    #header
+      button.openbtn(onclick='openNav()') &#9776;
+      h1 Records Management System
+    #mySidebar.sidebar
+      a.closebtn(href='javascript:void(0)' onclick='closeNav()') &times;
+      a(href='/catalog') Home
+      a(href='/catalog/incidents') All incidents
+      a(href='/catalog/persons') All persons
+      a(href='/catalog/vehicles') All vehicles
+    form#main.row.g-3
+      center
+        h1 Person Report
+      .row
+        .col
+          label.form-label(for='formGroupExampleInput') First
+          input.form-control(type='text' placeholder='' aria-label='First name')
+        .col
+          label.form-label(for='formGroupExampleInput') Last
+          input.form-control(type='text' placeholder='' aria-label='Last name')
+        .col
+          label.form-label(for='formGroupExampleInput') Middle
+          input.form-control(type='text' placeholder='' aria-label='Middle name')
+      .mb-3
+        label.form-label(for='formGroupExampleInput') SSN #
+        input#formGroupExampleInput.form-control(type='text' placeholder='')
+      .row
+        label.form-label(for='formGroupExampleInput') Driver's License
+        .col
+          input.form-control(type='text' placeholder='DL #' aria-label='DL #')
+        .col
+          input.form-control(type='text' placeholder='DL State' aria-label='DL State')
+        .col
+          input.form-control(type='text' placeholder='DL Exp. Date' aria-label='DL Exp. Date')
+      .mb-3
+        label.form-label(for='formGroupExampleInput') Race
+        select.form-select(aria-label='Default select example')
+          option(selected) Select a Race
+          option(value='1') White
+          option(value='2') Black
+          option(value='3') Hispanic
+          option(value='4') Indian/Native American
+          option(value='5') Asian
+          option(value='6') Unknown
+      .row
+        .col
+          label.form-label(for='formGroupExampleInput') Height
+          input.form-control(type='text' placeholder='' aria-label='Height')
+        .col
+          label.form-label(for='formGroupExampleInput') Weight
+          input.form-control(type='text' placeholder='' aria-label='Weight')
+      .row
+        .col
+          label.form-label(for='formGroupExampleInput') Eye Color
+          select.form-select(aria-label='Default select example')
+            option(selected) Select an Eye Color
+            option(value='1') Black
+            option(value='2') Blue
+            option(value='3') Brown
+            option(value='4') Green
+            option(value='5') Hazel
+            option(value='6') Gray
+        .col
+          label.form-label(for='formGroupExampleInput') Hair Color
+          select.form-select(aria-label='Default select example')
+            option(selected) Select Hair Color
+            option(value='1') Black
+            option(value='2') Brown
+            option(value='3') Blonde
+            option(value='4') Red
+            option(value='5') Gray
+            option(value='6') Bald
+      .row
+        label.form-label(for='formGroupExampleInput') Date of Birth
+        .col
+          select.form-select(aria-label='Default select example')
+            option(selected) Select Month
+            option(value='1') January
+            option(value='2') February
+            option(value='3') March
+            option(value='4') April
+            option(value='5') May
+            option(value='6') June
+            option(value='7') July
+            option(value='8') August
+            option(value='9') September
+            option(value='10') October
+            option(value='11') November
+            option(value='12') December
+        .col
+          select.form-select(aria-label='Default select example')
+            option(selected) Select Day
+            option(value='1') 1
+            option(value='2') 2
+            option(value='3') 3
+            option(value='4') 4
+            option(value='5') 5
+            option(value='6') 6
+            option(value='7') 7
+            option(value='8') 8
+            option(value='9') 9
+            option(value='10') 10
+            option(value='11') 11
+            option(value='12') 12
+            option(value='13') 13
+            option(value='14') 14
+            option(value='15') 15
+            option(value='16') 16
+            option(value='17') 17
+            option(value='18') 18
+            option(value='19') 19
+            option(value='20') 20
+            option(value='21') 21
+            option(value='22') 22
+            option(value='23') 23
+            option(value='24') 24
+            option(value='25') 25
+            option(value='26') 26
+            option(value='27') 27
+            option(value='28') 28
+            option(value='29') 29
+            option(value='30') 30
+            option(value='31') 31
+            option(value='32') 32
+        .col
+          input.form-control(type='text' placeholder='Year' aria-label='Year')
+      .mb-3
+        label.form-label(for='formGroupExampleInput') Age
+        input#formGroupExampleInput.form-control(type='text' placeholder='')
+      .mb-3
+        label.form-label(for='formGroupExampleInput') Scars/Marks
+        input#formGroupExampleInput.form-control(type='text' placeholder='')
+      .mb-3
+        label.form-label(for='formGroupExampleInput') Home Address
+        input#formGroupExampleInput.form-control(type='text' placeholder='')
+      .mb-3
+        label.form-label(for='formGroupExampleInput') Phone Number
+        input#formGroupExampleInput.form-control(type='text' placeholder='')
+      .mb-3
+        label.form-label(for='formGroupExampleInput') Gang Affliation
+        input#formGroupExampleInput.form-control(type='text' placeholder='')
+      .mb-3
+        label.form-label(for='formGroupExampleInput') Hazards
+        input#formGroupExampleInput.form-control(type='text' placeholder='')
+      .mb-3
+        label.form-label(for='formGroupExampleInput') SSN #
+        input#formGroupExampleInput.form-control(type='text' placeholder='')
+      .row
+        .col
+          label.form-label(for='formGroupExampleInput') Officer Name
+          input.form-control(type='text' placeholder='' aria-label='Height')
+        .col
+          label.form-label(for='formGroupExampleInput') Officer Serial Number
+          input.form-control(type='text' placeholder='' aria-label='Weight')
+      .mb-3
+        label.form-label(for='formGroupExampleInput') Report Date
+        input#formGroupExampleInput.form-control(type='text' placeholder='')
+      input.btn(type='submit' value='Submit')

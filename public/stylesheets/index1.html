@@ -1,26 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
     <title>RMS</title>
 </head>
+
 <body>
+    <div id="header">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <h1>Records Management System</h1>
+    </div>
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="#">Home</a>
         <a href="#">All incidents</a>
         <a href="#">All persons</a>
         <a href="#">All vehicles</a>
-      </div>
-      <div id="main">
-        <h1>Records Management System</h1>
-        <button class="openbtn" onclick="openNav()">&#9776;</button>
-        
     </div>
+    <form class="row g-3" id="main">
+        <center>
+            <h1>Vehicle Report</h1>
+        </center>
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">VIN</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ex: 12753">
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="formGroupExampleInput" class="form-label">Driver's License Number</label>
+                <input type="text" class="form-control" placeholder="" aria-label="Officer Name">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput" class="form-label">Driver's License State</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>State</option>
+                    <option value="1">Alabama</option>
+                    <option value="2">Alaska</option>
+                    <option value="3">Arizona</option>
+                    <option value="4">Arkansas</option>
+                    <option value="5">California</option>
+                    <option value="6">Colorado</option>
+                    <option value="7">Connecticut</option>
+                    <option value="8">Delaware</option>
+                    <option value="9">Florida</option>
+                    <option value="10">Georgia</option>
+                    <option value="11">Idaho</option>
+                    <option value="12">Hawaii</option>
+                    <option value="13">Illinois</option>
+                    <option value="14">Indiana</option>
+                    <option value="15">Iowa</option>
+                    <option value="16">Kansas</option>
+                    <option value="17">Kentucky</option>
+                    <option value="18">Louisiana</option>
+                    <option value="19">Maine</option>
+                    <option value="20">Maryland</option>
+                    <option value="21">Massachusetts</option>
+                    <option value="22">Michigan</option>
+                    <option value="23">Minnesota</option>
+                    <option value="24">Mississippi</option>
+                    <option value="25">Missouri</option>
+                    <option value="26">Montana</option>
+                    <option value="27">Nebraska</option>
+                    <option value="28">Nevada</option>
+                    <option value="29">New Hampshire</option>
+                    <option value="30">New Jersey</option>
+                    <option value="31">New Mexico</option>
+                    <option value="32">New York</option>
+                    <option value="33">North Carolina</option>
+                    <option value="34">North Dakota</option>
+                    <option value="35">Ohio</option>
+                    <option value="36">Oklahoma</option>
+                    <option value="37">Oregon</option>
+                    <option value="38">Pennsylvania</option>
+                    <option value="39">Rhode Island</option>
+                    <option value="40">South Carolina</option>
+                    <option value="41">South Dakota</option>
+                    <option value="42">Tennessee</option>
+                    <option value="43">Texas</option>
+                    <option value="44">Utah</option>
+                    <option value="45">Vermont</option>
+                    <option value="46">Virginia</option>
+                    <option value="47">Washington</option>
+                    <option value="48">West Virginia</option>
+                    <option value="49">Wisconsin</option>
+                    <option value="50">Wyoming</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="formGroupExampleInput" class="form-label">Make</label>
+                <input type="text" class="form-control" placeholder="" aria-label="Make">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput" class="form-label">Model</label>
+                <input type="text" class="form-control" placeholder="" aria-label="Model">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput" class="form-label">Year</label>
+                <input type="text" class="form-control" placeholder="" aria-label="Year">
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Color</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Select a vehicle color</option>
+                <option value="1">Beige</option>
+                <option value="2">Black</option>
+                <option value="3">Blue</option>
+                <option value="4">Bronze</option>
+                <option value="5">Brown</option>
+                <option value="6">Dark Blue</option>
+                <option value="7">Gold</option>
+                <option value="8">Gray</option>
+                <option value="9">Green</option>
+                <option value="10">Light Blue</option>
+                <option value="11">Maroon</option>
+                <option value="12">Orange</option>
+                <option value="13">Pink</option>
+                <option value="14">Purple</option>
+                <option value="15">Red</option>
+                <option value="16">Silver</option>
+                <option value="17">Tan</option>
+                <option value="18">Teal</option>
+                <option value="19">Turquoise</option>
+                <option value="20">White</option>
+                <option value="21">Yellow</option>
+                <option value="22">Unknown / Other</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Value</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="formGroupExampleInput" class="form-label">Officer Name</label>
+                <input type="text" class="form-control" placeholder="" aria-label="Officer Name">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput" class="form-label">Officer Serial Number</label>
+                <input type="text" class="form-control" placeholder="" aria-label="Officer Serial Number">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="formGroupExampleInput" class="form-label">Report Date</label>
+                <div class="row g-3">
+                    <div class="col-sm-7">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </div>
+                    <div class="col-sm">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Day</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                            <option value="32">32</option>
+                        </select>
+                    </div>
+                    <div class="col-sm">
+                        <input type="text" class="form-control" placeholder="Year" aria-label="Year">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput" class="form-label">Report Time</label>
+                <input type="text" class="form-control" placeholder="" aria-label="Report Time">
+            </div>
+        </div>
+        <input class="btn" type="submit" value="Submit">
+    </form>
 </body>
+
 </html>
