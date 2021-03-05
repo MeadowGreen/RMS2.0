@@ -3,16 +3,14 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var personSchema = new Schema({
-    code: { type: String, required: true },
-    code_quan: { type: Number, required: true },
-    last_name: { type: Number, required: true },
     first_name: { type: String, required: true },
-    middle: { type: String, required: true },
-    ssn_dl: { type: String, required: true },
+    last_name: { type: Number, required: true },
+    middle_name: { type: Number, required: true },\
+    ssn: { type: String, required: true },
+    dl: { type: Number, required: true },
     dl_state: { type: String, required: true },
     dl_exp: { type: String, required: true },
     race: { type: String, required: true },
-    origin: { type: String, required: true },
     sex: { type: String, required: true },
     height: { type: Number, required: true },
     weight: { type: Number, required: true },
@@ -25,5 +23,8 @@ var personSchema = new Schema({
     phone_number: { type: Number, required: true },
     gang: { type: String, required: true },
     hazards: { type: String, required: true },
-    photos: { type: String, required: true },
+    officer_name: { type: String, required: true },
+    officer_serial_number: { type: Number, required: true },
+    report_date: { type: Date, required: true },
+    report_time: { type: String, required: true }
 });

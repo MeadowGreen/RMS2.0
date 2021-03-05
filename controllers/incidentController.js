@@ -7,6 +7,10 @@ var async = require('async');
 // Display the home page.
 exports.index = function (req, res, next) {
     res.render('index');
+}
+
+// Display list of all incidents.
+exports.incident_list = function(req, res) {
     Incident.find()
         .sort([['ir', 'ascending']])
         .exec(function (err, list_incidents) {
