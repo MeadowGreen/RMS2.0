@@ -14,7 +14,6 @@ exports.incident_list = function(req, res) {
     Incident.find()
         .sort([['ir', 'ascending']])
         .exec(function (err, list_incidents) {
-            console.log(list_incidents);
             if (err) { return next(err); }
             //Successful, so render
             res.render('incident_list', { title: 'Incident List', incident_list: list_incidents });

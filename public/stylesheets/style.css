@@ -95,3 +95,48 @@ button{
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
 }
+
+
+/*Vehicle form */
+body#vehicle form, body#person form, body#incident form{
+  width: 80%;
+  margin-left: 10%;
+  border: 2px solid black;
+}
+div#content div{
+  padding-top: 2%;
+}
+div#related{
+  border-top: 2px solid black;
+  list-style-type: none;
+}
+div#related a{
+  color: black;
+  margin-right: none;
+  transition: none;
+  font-size: 1rem;
+  font-weight: 400;
+}
+div#related a:hover{
+  color: black;
+  font-size: 1rem;
+  margin-right: none;
+  transition: none;
+  cursor: pointer;
+}
+div#report{
+  border-top: 2px solid black;
+  padding-top: 2%;
+  font-size: 1rem;
+  font-weight: 400;
+}
+#submit button{
+  border-top: 2px solid black;
+  margin-left: 47%;
+  background-color: white;
+}
+#submit{
+  padding-top: 2%;
+  font-size: 1rem;
+  font-weight: 400;
+}

@@ -8,7 +8,7 @@ html(lang='en')
     link(href='/stylesheets/style.css' rel='stylesheet')
     script(src='/stylesheets/script.js')
     title RMS
-  body
+  body#vehicle
     #header
       button.openbtn(onclick='openNav()') &#9776;
       h1 Records Management System
@@ -21,170 +21,194 @@ html(lang='en')
     form#main.row.g-3
       center
         h1 Vehicle Report
-      .mb-3
-        label.form-label(for='formGroupExampleInput') VIN
-        input#formGroupExampleInput.form-control(type='text' placeholder='Ex: 12753')
-      .row
-        .col
-          label.form-label(for='formGroupExampleInput') Driver's License Number
-          input.form-control(type='text' placeholder='' aria-label='Officer Name')
-        .col
-          label.form-label(for='formGroupExampleInput') Driver's License State
-          select.form-select(aria-label='Default select example')
-            option(selected) State
-            option(value='1') Alabama
-            option(value='2') Alaska
-            option(value='3') Arizona
-            option(value='4') Arkansas
-            option(value='5') California
-            option(value='6') Colorado
-            option(value='7') Connecticut
-            option(value='8') Delaware
-            option(value='9') Florida
-            option(value='10') Georgia
-            option(value='11') Idaho
-            option(value='12') Hawaii
-            option(value='13') Illinois
-            option(value='14') Indiana
-            option(value='15') Iowa
-            option(value='16') Kansas
-            option(value='17') Kentucky
-            option(value='18') Louisiana
-            option(value='19') Maine
-            option(value='20') Maryland
-            option(value='21') Massachusetts
-            option(value='22') Michigan
-            option(value='23') Minnesota
-            option(value='24') Mississippi
-            option(value='25') Missouri
-            option(value='26') Montana
-            option(value='27') Nebraska
-            option(value='28') Nevada
-            option(value='29') New Hampshire
-            option(value='30') New Jersey
-            option(value='31') New Mexico
-            option(value='32') New York
-            option(value='33') North Carolina
-            option(value='34') North Dakota
-            option(value='35') Ohio
-            option(value='36') Oklahoma
-            option(value='37') Oregon
-            option(value='38') Pennsylvania
-            option(value='39') Rhode Island
-            option(value='40') South Carolina
-            option(value='41') South Dakota
-            option(value='42') Tennessee
-            option(value='43') Texas
-            option(value='44') Utah
-            option(value='45') Vermont
-            option(value='46') Virginia
-            option(value='47') Washington
-            option(value='48') West Virginia
-            option(value='49') Wisconsin
-            option(value='50') Wyoming
-      .row
-        .col
-          label.form-label(for='formGroupExampleInput') Make
-          input.form-control(type='text' placeholder='' aria-label='Make')
-        .col
-          label.form-label(for='formGroupExampleInput') Model
-          input.form-control(type='text' placeholder='' aria-label='Model')
-        .col
-          label.form-label(for='formGroupExampleInput') Year
-          input.form-control(type='text' placeholder='' aria-label='Year')
-      .mb-3
-        label.form-label(for='formGroupExampleInput') Color
-        select.form-select(aria-label='Default select example')
-          option(selected) Select a vehicle color
-          option(value='1') Beige
-          option(value='2') Black
-          option(value='3') Blue
-          option(value='4') Bronze
-          option(value='5') Brown
-          option(value='6') Dark Blue
-          option(value='7') Gold
-          option(value='8') Gray
-          option(value='9') Green
-          option(value='10') Light Blue
-          option(value='11') Maroon
-          option(value='12') Orange
-          option(value='13') Pink
-          option(value='14') Purple
-          option(value='15') Red
-          option(value='16') Silver
-          option(value='17') Tan
-          option(value='18') Teal
-          option(value='19') Turquoise
-          option(value='20') White
-          option(value='21') Yellow
-          option(value='22') Unknown / Other
-      .mb-3
-        label.form-label(for='formGroupExampleInput') Value
-        input#formGroupExampleInput.form-control(type='text' placeholder='')
-      .row
-        .col
-          label.form-label(for='formGroupExampleInput') Officer Name
-          input.form-control(type='text' placeholder='' aria-label='Officer Name')
-        .col
-          label.form-label(for='formGroupExampleInput') Officer Serial Number
-          input.form-control(type='text' placeholder='' aria-label='Officer Serial Number')
-      .row
-        .col
-          label.form-label(for='formGroupExampleInput') Report Date
-          .row.g-3
-            .col-sm-7
-              select.form-select(aria-label='Default select example')
-                option(selected) Month
-                option(value='1') January
-                option(value='2') February
-                option(value='3') March
-                option(value='4') April
-                option(value='5') May
-                option(value='6') June
-                option(value='7') July
-                option(value='8') August
-                option(value='9') September
-                option(value='10') October
-                option(value='11') November
-                option(value='12') December
-            .col-sm
-              select.form-select(aria-label='Default select example')
-                option(selected) Day
-                option(value='1') 1
-                option(value='2') 2
-                option(value='3') 3
-                option(value='4') 4
-                option(value='5') 5
-                option(value='6') 6
-                option(value='7') 7
-                option(value='8') 8
-                option(value='9') 9
-                option(value='10') 10
-                option(value='11') 11
-                option(value='12') 12
-                option(value='13') 13
-                option(value='14') 14
-                option(value='15') 15
-                option(value='16') 16
-                option(value='17') 17
-                option(value='18') 18
-                option(value='19') 19
-                option(value='20') 20
-                option(value='21') 21
-                option(value='22') 22
-                option(value='23') 23
-                option(value='24') 24
-                option(value='25') 25
-                option(value='26') 26
-                option(value='27') 27
-                option(value='28') 28
-                option(value='29') 29
-                option(value='30') 30
-                option(value='31') 31
-                option(value='32') 32
-            .col-sm
-              input.form-control(type='text' placeholder='Year' aria-label='Year')
-        .col
-          label.form-label(for='formGroupExampleInput') Report Time
-          input.form-control(type='text' placeholder='' aria-label='Report Time')
-      input.btn(type='submit' value='Submit')
+      #content
+        .row
+          .col
+            label.form-label(for='formGroupExampleInput') Driver's License Number
+            input.form-control(type='text' placeholder='C9J712J' aria-label='Officer Name')
+          .col
+            label.form-label(for='formGroupExampleInput') Driver's License State
+            select.form-select(aria-label='Default select example')
+              option(selected) State
+              option(value='AL') Alabama
+              option(value='AK') Alaska
+              option(value='AZ') Arizona
+              option(value='AR') Arkansas
+              option(value='CA') California
+              option(value='CO') Colorado
+              option(value='CT') Connecticut
+              option(value='DE') Delaware
+              option(value='FL') Florida
+              option(value='GA') Georgia
+              option(value='ID') Idaho
+              option(value='HI') Hawaii
+              option(value='IL') Illinois
+              option(value='IN') Indiana
+              option(value='IA') Iowa
+              option(value='KS') Kansas
+              option(value='KY') Kentucky
+              option(value='LA') Louisiana
+              option(value='ME') Maine
+              option(value='MD') Maryland
+              option(value='MA') Massachusetts
+              option(value='MI') Michigan
+              option(value='MN') Minnesota
+              option(value='MS') Mississippi
+              option(value='MO') Missouri
+              option(value='MT') Montana
+              option(value='NE') Nebraska
+              option(value='NV') Nevada
+              option(value='NH') New Hampshire
+              option(value='NJ') New Jersey
+              option(value='NM') New Mexico
+              option(value='NY') New York
+              option(value='NC') North Carolina
+              option(value='ND') North Dakota
+              option(value='OH') Ohio
+              option(value='OK') Oklahoma
+              option(value='OR') Oregon
+              option(value='PA') Pennsylvania
+              option(value='RI') Rhode Island
+              option(value='SC') South Carolina
+              option(value='SD') South Dakota
+              option(value='TN') Tennessee
+              option(value='TX') Texas
+              option(value='UT') Utah
+              option(value='VY') Vermont
+              option(value='VA') Virginia
+              option(value='WA') Washington
+              option(value='WV') West Virginia
+              option(value='WI') Wisconsin
+              option(value='WY') Wyoming
+          .col
+            label.form-label(for='formGroupExampleInput') VIN
+            input#formGroupExampleInput.form-control(type='text' placeholder='4Y1SL65848Z411439')
+        .row
+          .col
+            label.form-label(for='formGroupExampleInput') Make
+            input.form-control(type='text' placeholder='Ford' aria-label='Make')
+          .col
+            label.form-label(for='formGroupExampleInput') Model
+            input.form-control(type='text' placeholder='Fiesta' aria-label='Model')
+          .col
+            label.form-label(for='formGroupExampleInput') Year
+            input.form-control(type='text' placeholder='2002' aria-label='Year')
+        .row
+          .col
+            label.form-label(for='formGroupExampleInput') Color
+            select.form-select(aria-label='Default select example')
+              option(selected) Select a vehicle color
+              option(value='BGE') Beige
+              option(value='BLK') Black
+              option(value='BLU') Blue
+              option(value='BRZ') Bronze
+              option(value='BRO') Brown
+              option(value='DBL') Dark Blue
+              option(value='GLD') Gold
+              option(value='GRY') Gray
+              option(value='GRN') Green
+              option(value='LBL') Light Blue
+              option(value='MAR') Maroon
+              option(value='ORG') Orange
+              option(value='PNK') Pink
+              option(value='PLE') Purple
+              option(value='RED') Red
+              option(value='SIL') Silver
+              option(value='TAN') Tan
+              option(value='TEA') Teal
+              option(value='TRQ') Turquoise
+              option(value='WHI') White
+              option(value='YEL') Yellow
+              option(value='UNK') Unknown / Other
+          .col
+            label.form-label(for='formGroupExampleInput') Value
+            input#formGroupExampleInput.form-control(type='text' placeholder='$3,000')
+          .col
+            label.form-label(for='formGroupExampleInput') Add details
+            input#formGroupExampleInput.form-control(type='text' placeholder='Missing bumper, dents, etc...')
+      #related
+        center
+          h2 Related Reports
+        h3 Incidents:
+          ul
+            li
+              a(href='#') incident
+            li
+              a(href='#') incident
+            li
+              a(href='#') incident
+          h3 Persons:
+            ul
+              li
+                a(href='#') person
+              li
+                a(href='#') person
+              li
+                a(href='#') person
+            #report
+              .row
+                .col
+                  label.form-label(for='formGroupExampleInput') Officer Name
+                  input.form-control(type='text' placeholder='' aria-label='Officer Name')
+                  label.form-label(for='formGroupExampleInput') Officer Serial Number
+                  input.form-control(type='text' placeholder='' aria-label='Officer Serial Number')
+                .col
+                  label.form-label(for='formGroupExampleInput') Report Date
+                  .row.g-3
+                    .col-sm-7
+                      select.form-select(aria-label='Default select example')
+                        option(selected) Month
+                        option(value='1') January
+                        option(value='2') February
+                        option(value='3') March
+                        option(value='4') April
+                        option(value='5') May
+                        option(value='6') June
+                        option(value='7') July
+                        option(value='8') August
+                        option(value='9') September
+                        option(value='10') October
+                        option(value='11') November
+                        option(value='12') December
+                    .col-sm
+                      select.form-select(aria-label='Default select example')
+                        option(selected) Day
+                        option(value='1') 1
+                        option(value='2') 2
+                        option(value='3') 3
+                        option(value='4') 4
+                        option(value='5') 5
+                        option(value='6') 6
+                        option(value='7') 7
+                        option(value='8') 8
+                        option(value='9') 9
+                        option(value='10') 10
+                        option(value='11') 11
+                        option(value='12') 12
+                        option(value='13') 13
+                        option(value='14') 14
+                        option(value='15') 15
+                        option(value='16') 16
+                        option(value='17') 17
+                        option(value='18') 18
+                        option(value='19') 19
+                        option(value='20') 20
+                        option(value='21') 21
+                        option(value='22') 22
+                        option(value='23') 23
+                        option(value='24') 24
+                        option(value='25') 25
+                        option(value='26') 26
+                        option(value='27') 27
+                        option(value='28') 28
+                        option(value='29') 29
+                        option(value='30') 30
+                        option(value='31') 31
+                        option(value='32') 32
+                    .col-sm
+                      input.form-control(type='text' placeholder='Year' aria-label='Year')
+                  div
+                    label.form-label(for='formGroupExampleInput') Report Time
+                    input.form-control(type='text' placeholder='' aria-label='Report Time')
+            #submit
+              button(type='submit' width='10px') Submit

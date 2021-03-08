@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>RMS</title>
+</head>
+
+<body id="vehicle">
+    <div id="header">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <h1>Records Management System</a></h1>
+    </div>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">All incidents</a>
+        <a href="#">All persons</a>
+        <a href="#">All vehicles</a>
+    </div>
+    <form class="row g-3" id="main">
+        <center>
+            <h1>Vehicle Report</h1>
+        </center>
+        <div id="content">
+            <div class="row">
+                <div class="col">
+                    <label for="formGroupExampleInput" class="form-label">Driver's License Number</label>
+                    <input type="text" class="form-control" placeholder="C9J712J" aria-label="Officer Name">
+                </div>
+                <div class="col">
+                    <label for="formGroupExampleInput" class="form-label">Driver's License State</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>State</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="ID">Idaho</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VY">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="formGroupExampleInput" class="form-label">VIN</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="4Y1SL65848Z411439">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="formGroupExampleInput" class="form-label">Make</label>
+                    <input type="text" class="form-control" placeholder="Ford" aria-label="Make">
+                </div>
+                <div class="col">
+                    <label for="formGroupExampleInput" class="form-label">Model</label>
+                    <input type="text" class="form-control" placeholder="Fiesta" aria-label="Model">
+                </div>
+                <div class="col">
+                    <label for="formGroupExampleInput" class="form-label">Year</label>
+                    <input type="text" class="form-control" placeholder="2002" aria-label="Year">
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col">
+                    <label for="formGroupExampleInput" class="form-label">Color</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Select a vehicle color</option>
+                        <option value="BGE">Beige</option>
+                        <option value="BLK">Black</option>
+                        <option value="BLU">Blue</option>
+                        <option value="BRZ">Bronze</option>
+                        <option value="BRO">Brown</option>
+                        <option value="DBL">Dark Blue</option>
+                        <option value="GLD">Gold</option>
+                        <option value="GRY">Gray</option>
+                        <option value="GRN">Green</option>
+                        <option value="LBL">Light Blue</option>
+                        <option value="MAR">Maroon</option>
+                        <option value="ORG">Orange</option>
+                        <option value="PNK">Pink</option>
+                        <option value="PLE">Purple</option>
+                        <option value="RED">Red</option>
+                        <option value="SIL">Silver</option>
+                        <option value="TAN">Tan</option>
+                        <option value="TEA">Teal</option>
+                        <option value="TRQ">Turquoise</option>
+                        <option value="WHI">White</option>
+                        <option value="YEL">Yellow</option>
+                        <option value="UNK">Unknown / Other</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="formGroupExampleInput" class="form-label">Value</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="$3,000">
+                </div>
+                <div class="col">
+                    <label for="formGroupExampleInput" class="form-label">Add details</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Missing bumper, dents, etc...">
+                </div>
+            </div>
+        </div>
+        <div id="related">
+            <center>
+                <h2>Related Reports</h2>
+            </center>
+            <h3>Incidents:</h2>
+                <ul>
+                    <li><a href="#">incident</a></li>
+                    <li><a href="#">incident</a></li>
+                    <li><a href="#">incident</a></li>
+                </ul>
+            <h3>Persons:</h2>
+                <ul>
+                    <li><a href="#">person</a></li>
+                    <li><a href="#">person</a></li>
+                    <li><a href="#">person</a></li>
+                </ul>
+        </div>
+        <div id="report">
+            <div class="row">
+                <div class="col">
+                    <label for="formGroupExampleInput" class="form-label">Officer Name</label>
+                    <input type="text" class="form-control" placeholder="" aria-label="Officer Name">
+                    <label for="formGroupExampleInput" class="form-label">Officer Serial Number</label>
+                    <input type="text" class="form-control" placeholder="" aria-label="Officer Serial Number">
+                </div>
+                <div class="col">
+                    <label for="formGroupExampleInput" class="form-label">Report Date</label>
+                    <div class="row g-3">
+                        <div class="col-sm-7">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Month</option>
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </div>
+                        <div class="col-sm">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Day</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                                <option value="32">32</option>
+                            </select>
+                        </div>
+                        <div class="col-sm">
+                            <input type="text" class="form-control" placeholder="Year" aria-label="Year">
+                        </div>
+                    </div>
+                
+                <div>
+                    <label for="formGroupExampleInput" class="form-label">Report Time</label>
+                    <input type="text" class="form-control" placeholder="" aria-label="Report Time">
+                </div>
+                </div>
+            </div>
+        </div>
+        <div id="submit">
+            <button type="submit" width="10px">Submit</button>
+        </div>
+    </form>
+</body>
+
+</html>

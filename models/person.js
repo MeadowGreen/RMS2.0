@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 var personSchema = new Schema({
     first_name: { type: String, required: true },
     last_name: { type: Number, required: true },
-    middle_name: { type: Number, required: true },\
+    middle_name: { type: Number, required: true },
     ssn: { type: String, required: true },
     dl: { type: Number, required: true },
     dl_state: { type: String, required: true },
