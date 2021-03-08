@@ -1,14 +1,12 @@
 extends layout
 
 block content
-   #main
-      h2 Person List
-      .card-body
-        ul
+h1= title
+
+  ul
   each person in person_list
     li 
-      a(href=person.url) #{person.name} 
-      | (#{person.lifespan})
+      a(href=Person.url) #{Person.person_name} 
 
   else
     li There are no persons.

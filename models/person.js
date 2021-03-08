@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var personSchema = new Schema({
+var PersonSchema = new Schema({
     first_name: { type: String, required: true },
     last_name: { type: Number, required: true },
     middle_name: { type: Number, required: true },
@@ -28,3 +28,21 @@ var personSchema = new Schema({
     report_date: { type: Date, required: true },
     report_time: { type: String, required: true }
 });
+
+// Virtual for a person's first name.
+PersonSchema.virtual('person_name').get(function () {
+    return this.first_name;
+});
+
+// Virtual for this person URL.
+PersonSchema.virtual('url').get(function () {
+    return '/catalog/person/' + this._id;
+});
+
+// Virtual for the person serial number.
+PersonSchema.virtual('name').get(function () {
+    return this.serial_number;
+});
+
+// Export model.
+module.exports = mongoose.model('Person', PersonSchema);

@@ -8,8 +8,15 @@ exports.index = function (req, res) {
 };
 
 // Display list of all persons.
-exports.person_list = function(req, res) {
-    res.send('NOT IMPLEMENTED: Person list');
+exports.person_list = function(req, res, next) {
+    Person.find()
+        .sort({ person: 'asc', test: -1 })
+        .exec(function (err, list_person) {
+            console.log(list_person);
+            if (err) { return next(err); }
+            //Successful, so render
+            res.render('person_list', { title: 'Person List', person_list: list_person });
+        });
 };
 
 // Display detail page for a specific person.

@@ -8,8 +8,15 @@ exports.index = function (req, res) {
 };
 
 // Display list of all vehicles.
-exports.vehicle_list = function(req, res) {
-    res.send('NOT IMPLEMENTED: Vehicle list');
+exports.vehicle_list = function(req, res, next) {
+    Vehicle.find()
+        .sort({ vehicle: 'asc', test: -1 })
+        .exec(function (err, list_vehicle) {
+            console.log(list_vehicle);
+            if (err) { return next(err); }
+            //Successful, so render
+            res.render('vehicle_list', { title: 'Vehicle List', vehicle_list: list_vehicle });
+        });
 };
 
 // Display detail page for a specific vehicle.

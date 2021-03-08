@@ -2,21 +2,20 @@ var Incident = require('../models/incident');
 var Person = require('../models/person');
 var Vehicle = require('../models/vehicle');
 
-var async = require('async');
-
 // Display the home page.
 exports.index = function (req, res, next) {
     res.render('index');
 }
 
 // Display list of all incidents.
-exports.incident_list = function(req, res) {
+exports.incident_list = function(req, res, next) {
     Incident.find()
-        .sort([['ir', 'ascending']])
-        .exec(function (err, list_incidents) {
+        .sort({ ir: 'asc', test: -1 })
+        .exec(function (err, list_incident) {
+            console.log(list_incident);
             if (err) { return next(err); }
             //Successful, so render
-            res.render('incident_list', { title: 'Incident List', incident_list: list_incidents });
+            res.render('incident_list', { title: 'Incident List', incident_list: list_incident });
         });
 };
 
