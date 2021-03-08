@@ -1,14 +1,12 @@
 extends layout
 
 block content
-   #main
-      h2 Vehicle List
-      .card-body
-        ul
-  each vehicle in vehicle
+h1= title
+
+  ul
+  each vehicle in vehicle_list
     li 
-      a(href=vehicle.url) #{vehicle.name} 
-      | (#{vehicle.lifespan})
+      a(href=Vehicle.url) #{Vehicle.person_name} 
 
   else
     li There are no vehicles.

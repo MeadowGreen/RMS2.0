@@ -30,3 +30,6 @@ IncidentSchema.virtual('url').get(function () {
 IncidentSchema.virtual('name').get(function () {
     return this.serial_number;
 });
+
+// Export model.
+module.exports = mongoose.model('Incident', IncidentSchema);
