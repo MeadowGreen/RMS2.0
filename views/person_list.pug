@@ -1,10 +1,10 @@
 extends layout
 
 block content
-h1= title
+  h1= title
 
   ul
-  each person in person_list
+  each Person in person_list
     li 
       a(href=Person.url) #{Person.person_name} 
 

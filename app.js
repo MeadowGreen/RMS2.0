@@ -26,7 +26,8 @@ app.use('/catalog', catalogRouter);
 
 //Set up mongoose connection
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb+srv://MeadowG:password1234@cluster0.p1pdc.mongodb.net/rms_project?retryWrites=true&w=majority';
+var mongoDB = 'mongodb+srv://Admin:password1234@cluster0.p1pdc.mongodb.net/rms_project?retryWrites=true&w=majority';
+mongoose.Promise = global.Promise;
 mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));

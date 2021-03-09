@@ -1,12 +1,12 @@
 extends layout
 
 block content
-h1= title
+  h1= title
 
   ul
-  each incident in incident_list
+  each Incident in incident_list
     li 
       a(href=Incident.url) #{Incident.incident_number} 
-      
+
   else
     li There are no incidents.

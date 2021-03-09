@@ -11,11 +11,11 @@ exports.index = function (req, res, next) {
 exports.incident_list = function(req, res, next) {
     Incident.find()
         .sort({ ir: 'asc', test: -1 })
-        .exec(function (err, list_incident) {
-            console.log(list_incident);
+        .exec(function (err, list_incidents) {
+            console.log(list_incidents);
             if (err) { return next(err); }
             //Successful, so render
-            res.render('incident_list', { title: 'Incident List', incident_list: list_incident });
+            res.render('incident_list', { title: 'Incident List', incident_list: list_incidents });
         });
 };
 
