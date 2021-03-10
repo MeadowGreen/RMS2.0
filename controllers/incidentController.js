@@ -9,9 +9,9 @@ exports.index = function (req, res, next) {
 }
 
 // Display list of all incidents.
-exports.incident_list = function(req, res, next) {
+exports.incident_list = function (req, res, next) {
     Incident.find()
-        .sort({ ir: 'asc', test: -1 })
+        .populate('incident_type')
         .exec(function (err, list_incidents) {
             console.log(list_incidents);
             if (err) { return next(err); }
@@ -20,31 +20,15 @@ exports.incident_list = function(req, res, next) {
         });
 };
 
-
-exports.index = function (req, res) {
-    res.render('index');
-};
-
-// Display list of all incidents.
-exports.incident_list = function (req, res, next) {
-    res.send('NOT IMPLEMENTED: Incident list');
-};
-
- Stashed changes
 // Display detail page for a specific incident.
 exports.incident_detail = function (req, res) {
     res.send('NOT IMPLEMENTED: Incident detail: ' + req.params.id);
 };
 
 // Display incident create form on GET.
-
 exports.incident_create_get = function (req, res) {
     res.render('incident_form');
-
-exports.incident_create_get = function (req, res) { 
-    res.send('NOT IMPLEMENTED: Incident create GET');
- Stashed changes
-};
+}
 
 // Handle incident create on POST.
 exports.incident_create_post = function (req, res) {
@@ -65,7 +49,7 @@ exports.incident_delete_post = function (req, res) {
 exports.incident_update_get = function (req, res) {
     res.send('NOT IMPLEMENTED: Incident update GET');
 };
-  
+
 // Handle incident update on POST.
 exports.incident_update_post = function (req, res) {
     res.send('NOT IMPLEMENTED: Incident update POST');
