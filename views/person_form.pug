@@ -171,15 +171,15 @@ html(lang='en')
       #report
         .row
           .col
-            label.form-label(for='formGroupExampleInput') Officer Name
-            input.form-control(type='text' placeholder='' aria-label='Officer Name')
-            label.form-label(for='formGroupExampleInput') Officer Serial Number
-            input.form-control(type='text' placeholder='' aria-label='Officer Serial Number')
+            label.form-label(for='officer_name') Officer Name
+            input#officer_name.form-control(type='text' placeholder='' aria-label='Officer Name')
+            label.form-label(for='officer_num') Officer Serial Number
+            input#officer_num.form-control(type='text' placeholder='' aria-label='Officer Serial Number')
           .col
-            label.form-label(for='formGroupExampleInput') Report Date
+            label.form-label(for='report_date') Report Date
             .row.g-3
               .col-sm-7
-                select.form-select(aria-label='Default select example')
+                select#report_date.form-select(aria-label='Default select example')
                   option(selected) Month
                   option(value='1') January
                   option(value='2') February
@@ -194,7 +194,7 @@ html(lang='en')
                   option(value='11') November
                   option(value='12') December
               .col-sm
-                select.form-select(aria-label='Default select example')
+                select#report_date.form-select(aria-label='Default select example')
                   option(selected) Day
                   option(value='1') 1
                   option(value='2') 2
@@ -229,9 +229,9 @@ html(lang='en')
                   option(value='31') 31
                   option(value='32') 32
               .col-sm
-                input.form-control(type='text' placeholder='Year' aria-label='Year')
+                input#report_date.form-control(type='text' placeholder='Year' aria-label='Year')
             div
-              label.form-label(for='formGroupExampleInput') Report Time
-              input.form-control(type='text' placeholder='' aria-label='Report Time')
+              label.form-label(for='report_time') Report Time
+              input#report_time.form-control(type='text' placeholder='' aria-label='Report Time')
       #submit
         button(type='submit' width='10px') Submit

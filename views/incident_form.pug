@@ -17,22 +17,22 @@ html(lang='en')
       a(href='/catalog/incidents') All incidents
       a(href='/catalog/persons') All persons
       a(href='/catalog/vehicles') All vehicles
-    form#main.row.g-3
+    form#main.row.g-3(method='POST' action='')
       center
         h1 Incident Report
       .row
         .col
-          label.form-label(for='formGroupExampleInput') IR #
-          input#formGroupExampleInput.form-control(type='text' placeholder='Ex: 12753')
+          label.form-label(for='ir') IR #
+          input#ir.form-control(type='text' placeholder='Ex: 12753')
         .col
-          label.form-label(for='formGroupExampleInput') Incident Type
-          input#formGroupExampleInput.form-control(type='text' placeholder='')
+          label.form-label(for='incident_type') Incident Type
+          input#incident_type.form-control(type='text' placeholder='')
       .row
         .col
-          label.form-label(for='formGroupExampleInput') Occurrence Date
+          label.form-label(for='occurrence_date') Occurrence Date
           .row.g-3
             .col-sm-7
-              select.form-select(aria-label='Default select example')
+              select#occurrence_date.form-select(aria-label='Default select example')
                 option(selected) Month
                 option(value='1') January
                 option(value='2') February
@@ -47,7 +47,7 @@ html(lang='en')
                 option(value='11') November
                 option(value='12') December
             .col-sm
-              select.form-select(aria-label='Default select example')
+              select#occurrence_date.form-select(aria-label='Default select example')
                 option(selected) Day
                 option(value='1') 1
                 option(value='2') 2
@@ -82,18 +82,18 @@ html(lang='en')
                 option(value='31') 31
                 option(value='32') 32
             .col-sm
-              input.form-control(type='text' placeholder='Year' aria-label='Year')
+              input#occurrence_date.form-control(type='text' placeholder='Year' aria-label='Year')
         .col
-          label.form-label(for='formGroupExampleInput') Occurrence Time
-          input.form-control(type='text' placeholder='' aria-label='Occurrence Time')
+          label.form-label(for='occurrence_time') Occurrence Time
+          input#occurrence_time.form-control(type='text' placeholder='' aria-label='Occurrence Time')
       .row
         .col
-          label.form-label(for='formGroupExampleInput') Location Address
+          label.form-label(for='location_address') Location Address
           .row.g-3
             .col-sm-7
-              input.form-control(type='text' placeholder='City' aria-label='City')
+              input#location_address.form-control(type='text' placeholder='City' aria-label='City')
             .col-sm
-              select.form-select(aria-label='Default select example')
+              select#location_address.form-select(aria-label='Default select example')
                 option(selected) State
                 option(value='AL') Alabama
                 option(value='AK') Alaska
@@ -146,25 +146,25 @@ html(lang='en')
                 option(value='WI') Wisconsin
                 option(value='WY') Wyoming
             .col-sm
-              input.form-control(type='text' placeholder='Zip' aria-label='Zip')
+              input#location_address.form-control(type='text' placeholder='Zip' aria-label='Zip')
         .col
-          label.form-label(for='formGroupExampleInput') Location Name
-          input.form-control(type='text' placeholder='' aria-label='Location Name')
+          label.form-label(for='location_name') Location Name
+          input#location_name.form-control(type='text' placeholder='' aria-label='Location Name')
       .row
-        label.form-label(for='formGroupExampleInput') Narrative
+        label.form-label(for='narrative') Narrative
         textarea#narrative(name='narrative')
       #report
         .row
           .col
-            label.form-label(for='formGroupExampleInput') Officer Name
-            input.form-control(type='text' placeholder='' aria-label='Officer Name')
-            label.form-label(for='formGroupExampleInput') Officer Serial Number
-            input.form-control(type='text' placeholder='' aria-label='Officer Serial Number')
+            label.form-label(for='officer_name') Officer Name
+            input#officer_name.form-control(type='text' placeholder='' aria-label='Officer Name')
+            label.form-label(for='officer_num') Officer Serial Number
+            input#officer_num.form-control(type='text' placeholder='' aria-label='Officer Serial Number')
           .col
-            label.form-label(for='formGroupExampleInput') Report Date
+            label.form-label(for='report_date') Report Date
             .row.g-3
               .col-sm-7
-                select.form-select(aria-label='Default select example')
+                select#report_date.form-select(aria-label='Default select example')
                   option(selected) Month
                   option(value='1') January
                   option(value='2') February
@@ -179,7 +179,7 @@ html(lang='en')
                   option(value='11') November
                   option(value='12') December
               .col-sm
-                select.form-select(aria-label='Default select example')
+                select#report_date.form-select(aria-label='Default select example')
                   option(selected) Day
                   option(value='1') 1
                   option(value='2') 2
@@ -214,9 +214,9 @@ html(lang='en')
                   option(value='31') 31
                   option(value='32') 32
               .col-sm
-                input.form-control(type='text' placeholder='Year' aria-label='Year')
+                input#report_date.form-control(type='text' placeholder='Year' aria-label='Year')
             div
-              label.form-label(for='formGroupExampleInput') Report Time
-              input.form-control(type='text' placeholder='' aria-label='Report Time')
+              label.form-label(for='report_time') Report Time
+              input#report_time.form-control(type='text' placeholder='' aria-label='Report Time')
       #submit
         button(type='submit' width='10px') Submit
