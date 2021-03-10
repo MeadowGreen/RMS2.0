@@ -17,8 +17,8 @@ var IncidentSchema = new Schema({
 });
 
 // Virtual for incident IR Number.
-IncidentSchema.virtual('incident_number').get(function () {
-    return this.ir;
+IncidentSchema.virtual('incident_case').get(function () {
+    return this.incident_type;
 });
 
 // Virtual for this incident URL.
@@ -28,7 +28,7 @@ IncidentSchema.virtual('url').get(function () {
 
 // Virtual for this incident serial number.
 IncidentSchema.virtual('name').get(function () {
-    return this.serial_number;
+    return this.officer_serial_number;
 });
 
 // Export model.

@@ -41,7 +41,7 @@ PersonSchema.virtual('url').get(function () {
 
 // Virtual for the person serial number.
 PersonSchema.virtual('name').get(function () {
-    return this.serial_number;
+    return this.officer_serial_number;
 });
 
 // Export model.

@@ -30,7 +30,7 @@ VehicleSchema.virtual('url').get(function () {
 
 // Virtual for the vehicle serial number.
 VehicleSchema.virtual('name').get(function () {
-    return this.serial_number;
+    return this.officer_serial_number;
 });
 
 // Export model.
