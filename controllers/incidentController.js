@@ -3,6 +3,7 @@ var Person = require('../models/person');
 var Vehicle = require('../models/vehicle');
 
 // Display the home page.
+
 exports.index = function (req, res, next) {
     res.render('index');
 }
@@ -19,14 +20,30 @@ exports.incident_list = function(req, res, next) {
         });
 };
 
+
+exports.index = function (req, res) {
+    res.render('index');
+};
+
+// Display list of all incidents.
+exports.incident_list = function (req, res, next) {
+    res.send('NOT IMPLEMENTED: Incident list');
+};
+
+ Stashed changes
 // Display detail page for a specific incident.
 exports.incident_detail = function (req, res) {
     res.send('NOT IMPLEMENTED: Incident detail: ' + req.params.id);
 };
 
 // Display incident create form on GET.
+
 exports.incident_create_get = function (req, res) {
     res.render('incident_form');
+
+exports.incident_create_get = function (req, res) { 
+    res.send('NOT IMPLEMENTED: Incident create GET');
+ Stashed changes
 };
 
 // Handle incident create on POST.
@@ -48,7 +65,7 @@ exports.incident_delete_post = function (req, res) {
 exports.incident_update_get = function (req, res) {
     res.send('NOT IMPLEMENTED: Incident update GET');
 };
-
+  
 // Handle incident update on POST.
 exports.incident_update_post = function (req, res) {
     res.send('NOT IMPLEMENTED: Incident update POST');
