@@ -66,5 +66,5 @@ function generatePersons() {
 }
 
 let dataObj = generatePersons();
-
+//will push the info to data.json
 fs.writeFileSync('data.json', JSON.stringify(dataObj, null, '\t'));

@@ -6,7 +6,7 @@ function generateVehicles() {
   let vehicles = []
 
   for (let id=1; id <= 10; id++) {
-
+//fake schema for vehicle
     let vin = faker.vehicle.vin();
     let license_num = faker.random.alphaNumeric(7);
     let license_state = faker.address.stateAbbr();
@@ -45,4 +45,5 @@ function generateVehicles() {
 
 let dataObj = generateVehicles();
 
+//will push the info to data.json
 fs.writeFileSync('data.json', JSON.stringify(dataObj, null, '\t'));

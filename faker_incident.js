@@ -7,6 +7,7 @@ function generateIncidents() {
 
   for (let id=1; id <= 10; id++) {
     
+  //fake schema for incidents. Generates random info
     let ir = faker.random.number(12345);
     let occurrence_date = faker.date.future();
     let occurrence_time = faker.time.recent();
@@ -41,4 +42,5 @@ function generateIncidents() {
 
 let dataObj = generateIncidents();
 
+//will push the info to data.json
 fs.writeFileSync('data.json', JSON.stringify(dataObj, null, '\t'));
