@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
+//Schema for the vehicle page based on the mongoDB databse
 var VehicleSchema = new Schema({
     vin: { type: String, required: true },
     license_num: { type: String, required: true },
@@ -28,10 +29,10 @@ VehicleSchema.virtual('url').get(function () {
     return '/catalog/vehicle/' + this._id;
 });
 
-// Virtual for the vehicle serial number.
+// Virtual for the vehicle officer serial number.
 VehicleSchema.virtual('name').get(function () {
     return this.officer_serial_number;
 });
 
-// Export model.
+// Exports model.
 module.exports = mongoose.model('Vehicle', VehicleSchema);

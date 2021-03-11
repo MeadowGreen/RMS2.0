@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
+//Schema for the incident page based on the mongoDB databse
 var IncidentSchema = new Schema({
     ir: { type: Number, required: true },
     incident_type: { type: String, required: true },
@@ -16,7 +17,7 @@ var IncidentSchema = new Schema({
     report_time: { type: String, required: true }
 });
 
-// Virtual for incident IR Number.
+// Virtual for incident incident type.
 IncidentSchema.virtual('incident_case').get(function () {
     return this.incident_type;
 });
@@ -26,10 +27,10 @@ IncidentSchema.virtual('url').get(function () {
     return '/catalog/incident/' + this._id;
 });
 
-// Virtual for this incident serial number.
+// Virtual for this incident officer serial number.
 IncidentSchema.virtual('name').get(function () {
     return this.officer_serial_number;
 });
 
-// Export model.
+// Exports model.
 module.exports = mongoose.model('Incident', IncidentSchema);

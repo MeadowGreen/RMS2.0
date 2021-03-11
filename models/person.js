@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
+//Schema for the person page based on the mongoDB databse
 var PersonSchema = new Schema({
     first_name: { type: String, required: true },
     last_name: { type: Number, required: true },
@@ -39,10 +40,10 @@ PersonSchema.virtual('url').get(function () {
     return '/catalog/person/' + this._id;
 });
 
-// Virtual for the person serial number.
+// Virtual for the person officer serial number.
 PersonSchema.virtual('name').get(function () {
     return this.officer_serial_number;
 });
 
-// Export model.
+// Exports model.
 module.exports = mongoose.model('Person', PersonSchema);

@@ -3,7 +3,7 @@ var Person = require('../models/person');
 var Vehicle = require('../models/vehicle');
 const { body,validationResult } = require('express-validator');
 
-// Display the home page.n
+// Display the home page
 
 exports.index = function (req, res, next) {
     res.render('index');
